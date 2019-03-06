@@ -1,24 +1,20 @@
 import React from 'react';
-import c from './../constants';
 import {connect} from 'react-redux';
 import {v4} from 'uuid';
+import { addUserInput } from './../actions';
+import constants from './../constants';
+const { c } = constants;
 
 function NewUserInputForm (props){
   let _name = null;
 
   function handleNewInputFormSubmisson(event){
-    console.log(props);
-    const{dispatch} = props;
+    const { dispatch } = props;
     event.preventDefault();
-    const action = {
-      type: c.ADD_INPUT,
-      id: v4(),
-      name: _name.value
-    };
-    dispatch(action);
+    dispatch(addUserInput(_name.value));
     _name.value = '';
-
   }
+
   return (
     <div>
       <form onSubmit={handleNewInputFormSubmisson}>

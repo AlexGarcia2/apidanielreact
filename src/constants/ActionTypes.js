@@ -1,1 +1,2 @@
 export const ADD_INPUT = 'ADD_INPUT';
+export const RECEIVE_USER_INPUT = 'RECEIVE_USER_INPUT';

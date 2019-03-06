@@ -1,4 +1,5 @@
-import c from './../constants';
+import constants from './../constants';
+const { c } = constants;
 
 export default(state={}, action) =>{
   let newState;
@@ -12,6 +13,10 @@ export default(state={}, action) =>{
         id: id
       }
     });
+    return newState;
+  case c.RECEIVE_USER_INPUT:
+    newState = Object.assign({}, state);
+    newState[action.userInput.id] = action.userInput;
     return newState;
   default:
     return state;

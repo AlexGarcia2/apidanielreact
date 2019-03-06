@@ -4,9 +4,17 @@ import PropTypes from 'prop-types';
 import UserInputHome from './UserInputHome';
 import NewUserInputForm from './NewUserInputForm';
 import {connect} from 'react-redux';
+import constants from './../constants';
+const { c } = constants;
+import * as actions from './../actions';
 
 class App extends React.Component {
 
+  componentWillMount(){
+    const { dispatch } = this.props;
+    const { watchFirebaseUserInputsRef } = actions;
+    dispatch(watchFirebaseUserInputsRef());
+  }
 
   render(){
     return (

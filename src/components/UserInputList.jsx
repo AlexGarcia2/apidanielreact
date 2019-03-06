@@ -3,13 +3,12 @@ import UserInput from './UserInput';
 import PropTypes from 'prop-types';
 
 function UserInputList(props){
-  console.log(props);
   return (
     <div>
       <hr/>
       {Object.keys(props.userInputList).map(function(userInputId){
         let userInput = props.userInputList[userInputId];
-        console.log(userInput, "here")
+        console.log(userInput, 'here');
         return <UserInput name={userInput.name}
           key={userInputId}
           userInputId={userInputId} />;
