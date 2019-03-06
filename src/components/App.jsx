@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import UserInputHome from './UserInputHome'
-import NewUserInputForm from './NewUserInputForm'
+import UserInputHome from './UserInputHome';
+import NewUserInputForm from './NewUserInputForm';
 import {connect} from 'react-redux';
 
 class App extends React.Component {

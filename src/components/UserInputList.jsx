@@ -3,18 +3,19 @@ import UserInput from './UserInput';
 import PropTypes from 'prop-types';
 
 function UserInputList(props){
-  console.log(props)
-    return (
-      <div>
-        <hr/>
-        {Object.keys(props.UserInputList).map(function(userInputId){
-          let userInput = props.UserInputList[userInputId];
-          return <UserInput name={UserInput.name}
-                  key={userInputId}
-                  userInputId={userInputId} />;
-              })}
-      </div>
-    );
+  console.log(props);
+  return (
+    <div>
+      <hr/>
+      {Object.keys(props.userInputList).map(function(userInputId){
+        let userInput = props.userInputList[userInputId];
+        console.log(userInput, "here")
+        return <UserInput name={userInput.name}
+          key={userInputId}
+          userInputId={userInputId} />;
+      })}
+    </div>
+  );
 }
 
 UserInputList.propTypes = {
@@ -22,4 +23,4 @@ UserInputList.propTypes = {
 };
 
 
-export default UserInputList
+export default UserInputList;

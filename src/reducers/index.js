@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-import databaseReducer from './database-reducer'
+import databaseReducer from './database-reducer';
 
 
 const rootReducer = combineReducers({
